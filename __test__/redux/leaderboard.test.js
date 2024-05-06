@@ -43,7 +43,7 @@ describe('leaderboardSlice', () => {
         });
 
         it('should return error when given by asyncLeaderboard thunk', async () => {
-            leaderboardService.leaderboardss = vi.fn().mockRejectedValue(fakeError);
+            leaderboardService.leaderboard = vi.fn().mockRejectedValue(fakeError);
 
             const dispatch = vi.fn();
 
