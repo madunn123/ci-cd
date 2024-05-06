@@ -27,6 +27,8 @@ export default function Thread() {
         dispatch(asyncGetAllUsers())
     }, [])
 
+    // add
+
     return (
         <section className="container px-4 pb-20 sm:px-28">
             <div className="flex flex-col gap-6">
