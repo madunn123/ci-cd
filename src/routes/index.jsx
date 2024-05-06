@@ -25,14 +25,14 @@ export default function Routers() {
         <>
             <GetLayout>
                 <Routes>
-                    {/* {user === null && (
+                    {user === null && (
                         <Fragment>
                             <Route path="/*" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                         </Fragment>
                     )}
 
-                    <Route path="/" element={<Thread />} /> */}
+                    <Route path="/" element={<Thread />} />
                     <Route path="/thread/detail/:id" element={<ThreadDetail />} />
                     <Route path="/thread/create" element={<CreateThread />} />
                     <Route path="/leaderboard" element={<Leaderboard />} />
