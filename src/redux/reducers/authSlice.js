@@ -68,7 +68,7 @@ const authSlice = createSlice({
         })
         addCase(asyncRegister.fulfilled, (state, action) => {
             // state.loadingAsyncRegister = false;
-            state.dataAsyncRegister = action.payload;
+            // state.dataAsyncRegister = action.payload;
         })
         addCase(asyncRegister.rejected, (state, action) => {
             state.loadingAsyncRegister = false;
