@@ -11,25 +11,25 @@ export default function BottomBar() {
     const { pathname } = useLocation();
 
     return (
-        <nav className="bg-slate-700 text-slate-100 py-3.5 fixed bottom-0 left-0 w-full">
+        <nav className="bg-stone-600 text-slate-100 py-3.5 fixed bottom-0 left-0 w-full">
             <div className="container flex flex-row items-center justify-center gap-16">
                 <Link to="/">
-                    <AiOutlineWechat className={`text-3xl text-slate-400 ${pathname === '/' && 'text-green-500'}`} />
+                    <AiOutlineWechat className={`text-3xl ${pathname === '/' ? 'text-green-500' : 'text-slate-400'}`} />
                 </Link>
 
                 {user && (
                     <Link to="/thread/create" className="block sm:hidden">
-                        <AiOutlinePlus className={`text-3xl text-slate-400 ${pathname === '/leaderboard' && 'text-green-500'}`} />
+                        <AiOutlinePlus className={`text-3xl ${pathname === '/leaderboard'? 'text-green-500' : 'text-slate-400'}`} />
                     </Link>
                 )}
 
                 <Link to="/leaderboard">
-                    <MdLeaderboard className={`text-3xl text-slate-400 ${pathname === '/leaderboard' && 'text-green-500'}`} />
+                    <MdLeaderboard className={`text-3xl ${pathname === '/leaderboard'? 'text-green-500' : 'text-slate-400'}`} />
                 </Link>
 
                 {user === null ? (
                     <Link to="/*">
-                        <AiOutlineLogin className={`text-3xl text-slate-400 ${pathname === '/*' && 'text-green-500'}`} />
+                        <AiOutlineLogin className={`text-3xl ${pathname === '/*'? 'text-green-500' : 'text-slate-400'}`} />
                     </Link>
                 ) : (
                     <button type="button" onClick={() => dispatch(logout())}>
